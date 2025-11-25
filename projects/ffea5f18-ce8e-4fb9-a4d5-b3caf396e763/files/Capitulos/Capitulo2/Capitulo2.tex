@@ -1,0 +1,235 @@
+\section{Capítulo II: Marco teórico y Referencial}
+
+\subsection{Antecedentes de la Investigación}
+
+\subsubsection{Estado de Arte}
+
+El desarrollo de dispositivos adaptativos para la prevención de úlceras por presión ha cobrado un interés significativo en los últimos años, particularmente en la mejora de la calidad de vida de personas con movilidad reducida. Las investigaciones actuales se han centrado en el diseño de sistemas de monitoreo y redistribución de presión para evitar la formación de estas lesiones. A continuación, se describen diversos enfoques representativos de estos avances tecnológicos.
+
+Uno de los métodos fundamentales para estudiar el impacto de la presión sobre los tejidos blandos es el desarrollo de modelos mecánicos que simulan las condiciones de carga en áreas vulnerables del cuerpo. \cite{gayol2017} desarrollaron un modelo de pelvis-tejido blando que permite simular la presión en el área de las tuberosidades isquiáticas. Utilizando sensores Flexi-Force, midieron las fuerzas generadas bajo condiciones controladas, observando que las fuerzas de contacto en zonas profundas pueden exceder de 5 a 11 veces los valores de presión superficial, coincidiendo con \cite{gefen2020}.
+
+Por su parte, \cite{womey2024} desarrollaron un sistema que incluye un análogo de muslo-nalga con un cojín instrumentado. Este sistema utiliza sensores de presión, temperatura y humedad junto con actuadores para redistribuir la presión activamente mediante un algoritmo de normalización de presión. Además, simula circulación con flujo pulsátil y permite el estudio del colapso venoso.
+
+Asimismo, \cite{katz2023} analizaron superficies híbridas que redistribuyen presión en pacientes en posición supina. En la Conferencia de Medición y Automatización Mecatrónica (2022) se presentó un colchón con cámaras de agua y aire que ajusta dinámicamente la presión con sensores en tiempo real.
+
+Otro aporte importante lo realizó \cite{park2023}, quienes propusieron un sistema portátil con sensores de metal líquido y termistor. Un algoritmo PTI alerta por presión prolongada en áreas de riesgo, brindando comodidad, monitoreo continuo y adaptabilidad.
+
+En cuanto a la postura, \cite{morales2024} crearon un sistema de clasificación con redes neuronales convolucionales (CNN) que detecta y corrige posturas sedentarias. En la misma línea, \cite{barsocchi2013} usó sensores de bajo costo con algoritmos SVM y K-NN para clasificar posiciones en cama. \cite{wu2022} emplearon inteligencia artificial para detectar micro-progresiones con un 89\% de precisión usando imágenes clínicas.
+
+En el entorno domiciliario, \cite{roddis2024} identificaron barreras en la prevención, destacando la importancia del entorno y la educación del cuidador. Investigaciones como las de \cite{rodriguezpalma2021} y \cite{gomez2019} evaluaron la eficacia de cojines y colchones con distribución dinámica de presión.
+
+A nivel de materiales inteligentes, \cite{chen2022} y \cite{liu2024} desarrollaron algoritmos de IA con alta precisión predictiva. Lee et al. (2022) investigaron hidrogeles con propiedades de distribución y absorción, mientras que \cite{zhang2023} usaron nanomateriales antimicrobianos. Además, \cite{smith2023} y \cite{wang2024} crearon textiles con redistribución dinámica y control del microclima.
+
+Finalmente, \cite{sazonov2014} diseñaron un sistema de monitoreo de presión en cojines para lesionados medulares, y \cite{muralikumar2024} propusieron cojines con hidrogel y mapeo de presión adaptativo.
+
+Los avances en redistribución de presión han sido diversos, desde dispositivos de bajo costo hasta sistemas sofisticados con sensores e inteligencia artificial. El uso de superficies inteligentes, monitoreo en tiempo real y clasificación de posturas permite una prevención integral. La presente investigación propone el uso de mini actuadores para redistribución personalizada y en tiempo real.
+
+Para el futuro, se recomienda integrar estas tecnologías en superficies inteligentes que ajusten condiciones de soporte según necesidades fisiológicas y posturales. La incorporación de algoritmos de aprendizaje profundo y la participación de cuidadores podría mejorar la eficacia, precisión y personalización del cuidado en pacientes con movilidad reducida.
+
+
+\subsection{Bases o fundamentos teóricos}
+
+\subsubsection{Marco Teórico}
+
+
+\textbf{Fisiopatología de las úlceras por presión}
+
+De acuerdo a Pike (2021), las úlceras por presión son lesiones cutáneas y subcutáneas causadas por la falta de riego sanguíneo en zonas sometidas a presión prolongada sobre prominencias óseas. Factores como la humedad, la fricción y el cizallamiento agravan estas lesiones. Así mismo, según la Revista Latinoamericana de Enfermagem (2020), estas lesiones ocurren debido a la reducción del flujo sanguíneo que provoca isquemia y necrosis tisular. Este tipo de afección es común en pacientes con movilidad reducida que permanecen en una misma posición por largos periodos, lo que resalta la importancia de comprender los factores que contribuyen a su aparición.
+
+La Organización Panamericana de la Salud (OPS, 2014) y la Guía de consulta rápida de la EPUAP-NPUAP-PPPIA ofrecen una clasificación detallada de las úlceras por presión, basada en la profundidad y severidad de la lesión. Esta clasificación resulta fundamental para una evaluación precisa y la implementación de un plan de tratamiento adecuado.
+
+\begin{itemize}
+    \item \textbf{Categoría I:} Eritema no blanqueable. Se caracteriza por un enrojecimiento localizado y persistente en una zona de piel intacta, generalmente sobre una prominencia ósea. La piel puede estar más caliente o fría al tacto, y puede ser dolorosa. A pesar de que la piel está intacta, esta categoría indica un daño tisular inicial y requiere intervención inmediata para prevenir la progresión de la lesión.
+    \item \textbf{Categoría II:} Pérdida parcial del espesor de la piel. En esta categoría, se observa una pérdida de la epidermis y parte de la dermis, resultando en una úlcera superficial, abierta y dolorosa. El lecho de la herida suele ser de color rojo rosado y puede presentar tejido de granulación.
+    \item \textbf{Categoría III:} Pérdida total del espesor de la piel. La lesión afecta toda la piel, exponiendo el tejido subcutáneo. Pueden observarse túneles o cavidades en la herida. El tejido necrótico puede estar presente, pero no oculta la profundidad de la lesión.
+    \item \textbf{Categoría IV:} Pérdida total del espesor del tejido. Representa la lesión más grave, con pérdida completa del espesor de la piel, tejido subcutáneo, y exposición de músculo, tendón o hueso. A menudo se observa tejido necrótico y esfacelos.
+\end{itemize}
+
+Simultáneamente, Montañez y colaboradores (2024) describen una clasificación de las úlceras por presión basada en la profundidad y extensión de la lesión. Las úlceras evolucionan a través de diferentes estadios, desde enrojecimientos superficiales hasta lesiones profundas que comprometen tejidos como músculos y huesos. Esta clasificación es fundamental para determinar el tratamiento y el pronóstico de cada paciente.
+
+\textbf{Isquemia}
+
+En un estudio realizado por Bonivento et al. (2021), se identificó que la isquemia por presión es la principal razón detrás de la aparición de ulceraciones en pacientes institucionalizados. Los autores enfatizan la importancia de implementar estrategias preventivas para reducir la presión sobre los tejidos y así disminuir la incidencia de estas lesiones.
+
+Sin embargo, aunque se ha creído tradicionalmente que la isquemia tisular es el único factor causante de las úlceras por presión, investigaciones recientes sugieren una etiología más compleja. Bonivento y colaboradores (2021) proponen que la combinación de isquemia, lesión por reperfusión y alteraciones en el drenaje linfático contribuyen al desarrollo de estas lesiones. Además, la deformación de los tejidos, más que la presión en sí, parece ser un factor predictivo más preciso.
+
+\textbf{Regiones de mayor riesgo en posición sedente}
+
+Montes Montoya (2013) identifica en su investigación diversas prominencias óseas como el omóplato, la cresta iliaca, el sacro, el trocánter mayor, el isquion, la poplítea, el maléolo externo y el calcáneo como zonas de alto riesgo para el desarrollo de úlceras por presión en personas que permanecen sentadas por períodos prolongados. Por lo tanto, las áreas de riesgo según este autor son:
+
+\begin{itemize}
+    \item \textbf{Omóplato:} Ubicada en la parte posterior del tórax, soporta gran parte del peso corporal al estar sentado.
+    \item \textbf{Cresta iliaca:} El borde superior del hueso de la cadera, vulnerable al contacto constante con superficies duras.
+    \item \textbf{Sacro:} Situado en la base de la columna vertebral, soporta una gran cantidad de peso corporal en posición sedente.
+    \item \textbf{Trocánter mayor:} Prominencia ósea del fémur, clave como punto de apoyo sentado, susceptible a presión prolongada.
+    \item \textbf{Isquion:} Parte del hueso de la cadera que soporta el peso al estar sentado, común sitio de úlceras.
+    \item \textbf{Poplítea:} Parte trasera de la rodilla, afectada por presión y roce con las piernas flexionadas.
+    \item \textbf{Maléolo externo:} Protuberancia del tobillo, vulnerable si los pies cuelgan.
+    \item \textbf{Calcáneo:} El talón, afectado por presión excesiva al estar sentado o de pie.
+\end{itemize}
+
+\textbf{Factores relacionados con las úlceras por presión}
+
+Las úlceras por presión (UPP) se ven influenciadas por varios factores de riesgo que afectan directamente la piel y los tejidos subyacentes.
+
+Jiménez et al. (2017) clasifican los factores de riesgo para el desarrollo de úlceras por presión en tres categorías:
+
+\begin{itemize}
+    \item \textbf{Factores extrínsecos:} Fuerzas externas como la presión, fricción, cizallamiento y humedad excesiva.
+    \item \textbf{Factores intrínsecos:} Condiciones del paciente como incontinencia, desnutrición, inmovilidad y alteraciones inmunológicas.
+    \item \textbf{Factores asistenciales:} Calidad del cuidado, higiene deficiente, uso inadecuado de materiales preventivos y falta de educación sanitaria.
+\end{itemize}
+
+Entre estos factores, los extrínsecos son particularmente relevantes en el contexto de un dispositivo adaptativo. La fricción es uno de los más importantes.
+
+La fricción se refiere al roce tangencial entre dos superficies; en el contexto de las UPP, ocurre cuando la piel del paciente entra en contacto con superficies como las camas, generando microlesiones por deslizamiento (Delgado Jácome, 2022).
+
+
+\begin{figure}[h]
+    \centering
+    \caption{\textit{Proceso de Formación de Úlceras por Presión en Pacientes con Movilidad}}
+    \includegraphics[width=0.8\textwidth]{Capitulos/Capitulo2/Proceso de formacion ulceras.JPG} % Reemplaza "ejemplo.png" con el nombre de tu archivo de imagen
+    \\
+    Fuente: Elaboración propia\\
+    \label{fig:palma_aceite}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{Factores de riesgo para la formación de úlceras por presión}
+\begin{tabular}{|p{4cm}|p{6cm}|p{5cm}|}
+\hline
+\textbf{Factor de Riesgo} & \textbf{Descripción} & \textbf{Ejemplo} \\
+\hline
+Inmovilidad & Incapacidad para moverse de manera independiente & Pacientes postrados en cama \\
+\hline
+Desnutrición & Falta de nutrientes esenciales para la salud de la piel & Personas con dietas insuficientes \\
+\hline
+Edad Avanzada & Reducción de la grasa subcutánea y flujo sanguíneo & Personas mayores de 65 años \\
+\hline
+Enfermedades Crónicas & Condiciones que afectan la circulación y la salud de la piel & Diabetes, enfermedades cardiovasculares \\
+\hline
+Cizallamiento & Esfuerzos que ocurren cuando la piel se desliza en una dirección mientras el hueso subyacente se mueve en otra & Pacientes en posición sedente \\
+\hline
+\end{tabular}
+\caption*{\textup{
+Fuente: Elaboración propia\\
+}}
+\label{tab:factores_riesgo}
+\end{table}
+
+
+
+
+\subsection{Antecedentes del Contexto}
+
+
+La aparición de úlceras por presión (UPP) es una complicación común en personas con movilidad reducida, especialmente en usuarios de sillas de ruedas y pacientes inmovilizados. Este problema ha impulsado el desarrollo de soluciones tecnológicas enfocadas en la redistribución de presión mediante sensores, algoritmos inteligentes y materiales avanzados.
+
+Investigaciones recientes han abordado esta problemática desde diversas perspectivas. Li et al. \cite{li2013} diseñaron cojines personalizados usando modelado por elementos finitos y sensores Tekscan, logrando una reducción significativa de la presión. Posteriormente, aplicaron algoritmos de normalización para adaptar la forma del cojín a cada usuario con herramientas CAD/CAM \cite{li2014}.
+
+Otros estudios, como el de Defloor y Grypdonck \cite{defloor2000}, evaluaron 29 tipos de cojines y concluyeron que solo algunos modelos de aire y espuma resultaron eficaces. Chenu et al. \cite{chenu2013} desarrollaron el sistema TexiCare, un dispositivo textil inteligente que alertaba al usuario sobre posturas de riesgo.
+
+Con el avance de la inteligencia artificial, han surgido sistemas más sofisticados como el de Saleh et al. \cite{saleh2021}, que combina sensores de presión, humedad y saturación con electroestimulación automática. De igual forma, Fard et al. \cite{fard2014} implementaron un sistema de monitoreo con visualización en MATLAB y detección de posturas mediante ANOVA.
+
+Otras propuestas, como la de Muralikumar et al. \cite{muralikumar2024}, se enfocan en soluciones portátiles basadas en hidrogel y mapeo de presión, mientras que Brunzini et al. \cite{brunzini2023} usaron simuladores y clasificadores para optimizar colchones activos. Pradon et al. \cite{pradon2017} validaron, mediante normas ISO, la eficacia de varios cojines en la distribución de presión.
+
+Estas investigaciones demuestran la necesidad de soluciones mecatrónicas avanzadas para prevenir las UPP, combinando sensores, materiales adaptativos y algoritmos de control, con el objetivo de mejorar la calidad de vida de los pacientes y reducir la carga sobre cuidadores.
+
+
+\subsection{Variables o categorías de la investigación}
+
+\subsubsection{Definición Conceptual}
+El presente estudio se centra en el fen\'omeno de las \'ulceras por presi\'on en pacientes con movilidad reducida, abordando la problem\'atica desde una perspectiva interdisciplinaria que integra conocimientos de la ingenier\'ia, la medicina y las ciencias de la computaci\'on. A continuaci\'on, se presenta un marco conceptual que define los t\'erminos clave y delimita el \'ambito de investigaci\'on:
+
+\begin{itemize}[leftmargin=*, label=\textbullet]
+  \item \textbf{Lesiones por presi\'on (LLP)}: Son lesiones cut\'aneas isqu\'emicas tambi\'en conocidas como escaras o \textit{\'ulceras por presi\'on}, causadas por una presi\'on prolongada y excesiva sobre tejidos blandos, que comprometen la integridad de la piel y pueden extenderse a estructuras m\'as profundas (\cite{sanromero2023}).
+  \item \textbf{Cizallamiento}: Esfuerzos que ocurren cuando la piel se desliza en una direcci\'on mientras el hueso subyacente se mueve en otra. Este fen\'omeno es uno de los factores que contribuyen al desarrollo de lesiones por presi\'on, especialmente en pacientes en posici\'on sedente (\cite{rodriguezmanero2022}).
+  \item \textbf{Isquemia}: Falta de suministro sangu\'ineo adecuado a los tejidos debido a la presi\'on prolongada sobre una zona. Esto puede llevar a la necrosis o muerte de las c\'elulas y, en consecuencia, al desarrollo de \textit{\'ulceras por presi\'on} (Moreno \& del Portillo, 2016).
+  \item \textbf{Movilidad reducida}: Es una limitaci\'on significativa en la capacidad de realizar movimientos independientes, ya sea por causas f\'isicas, neurol\'ogicas o m\'edicas (Jaramillo Giraldo, 2016).
+  \item \textbf{Posici\'on sedente}: Se refiere a la posici\'on en la que una persona est\'a sentada durante per\'iodos prolongados. Esta posici\'on concentra la presi\'on en \'areas como la regi\'on sacra y las tuberosidades isqui\'aticas, lo que puede causar \textit{\'ulceras por presi\'on} si no se distribuye adecuadamente la presi\'on (\cite{quintana2004}).
+  \item \textbf{Dispositivo adaptativo}: Un dispositivo que se ajusta autom\'aticamente a las necesidades del usuario. En el contexto de este proyecto, se trata de un equipo que monitoriza la presi\'on ejercida sobre las \'areas de riesgo del paciente y ajusta su distribuci\'on para prevenir la formaci\'on de \textit{\'ulceras por presi\'on} (\cite{castillo2018}).
+  \item \textbf{Sensores de presi\'on}: Dispositivos electr\'onicos que detectan y miden la presi\'on ejercida en un \'area espec\'ifica. En el proyecto, estos sensores permitir\'an identificar las zonas con mayor riesgo de desarrollar \textit{\'ulceras} y ajustar el sistema para redistribuir la presi\'on de forma adecuada (\cite{smoot2023}).
+  \item \textbf{Plataforma de programaci\'on}: Simulaci\'on de procesos cognitivos humanos mediante sistemas inform\'aticos, con aplicaciones en el diagn\'ostico, pron\'ostico y tratamiento de diversas patolog\'ias (\cite{coursera2023}).
+  \item \textbf{Materiales avanzados}: Sustancias con propiedades f\'isicas, qu\'imicas y biol\'ogicas optimizadas para aplicaciones m\'edicas, como hidrogeles, nanomateriales y textiles inteligentes (\cite{verduzco2023}).
+  \item \textbf{Monitoreo continuo}: Vigilancia ininterrumpida de variables fisiol\'ogicas y ambientales relevantes para la detecci\'on temprana de factores de riesgo y la evaluaci\'on de la respuesta a las intervenciones (\cite{coronel2023}).
+  \item \textbf{Predicci\'on de riesgo}: Utilizaci\'on de modelos matem\'aticos y algoritmos de aprendizaje autom\'atico para estimar la probabilidad de desarrollar \textit{\'ulceras por presi\'on} en un individuo determinado (\cite{donado2017}).
+  \item \textbf{Intervenci\'on temprana}: Conjunto de acciones preventivas o terap\'euticas implementadas en las primeras etapas del desarrollo de una \textit{\'ulcera por presi\'on} para evitar su progresi\'on y complicaciones (\cite{sanromero2023}).
+  \item \textbf{Calidad de vida relacionada con la salud}: Percepci\'on individual del bienestar f\'isico, psicol\'ogico y social, en el contexto de una enfermedad o condici\'on cr\'onica (\cite{sanromero2023}).
+  \item \textbf{Costo-efectividad}: Evaluaci\'on econ\'omica de una intervenci\'on sanitaria, considerando tanto los costos directos e indirectos como los beneficios en t\'erminos de salud y calidad de vida (\cite{sanromero2023}).
+\end{itemize}
+
+\subsubsection{Definición de términos}
+En el contexto de esta investigación, la cual se centra en el diseño virtual de un dispositivo adaptativo para la redistribución de presión en la región glútea, resulta de gran importancia descomponer las variables en propiedades observables e indicadores medibles, dado que se trata de una investigación de tipo cuantitativa. Esta descomposición permite establecer una relación clara entre el diseño técnico del dispositivo y su impacto funcional, facilitando su evaluación mediante validaciones virtuales y simulaciones. 
+
+Dado que el estudio se desarrolla en un entorno virtual, sin intervención directa en pacientes, la medición de las variables se realiza a través de herramientas de simulación como lo son los softwares COMSOL Multiphysics y Proteus, lo que exige una definición precisa de los elementos que componen cada variable. Esta estructura garantiza la trazabilidad de los resultados y la coherencia metodológica con el enfoque cuantitativo y explicativo de este proyecto proyecto.
+
+Por tal razón, a continuación se presentan las variables principales del estudio desglosadas:
+\begin{itemize}
+    \item  \textbf{Variable independiente: Diseño y funcionamiento del dispositivo adaptativo}
+\\
+Estas variables representan el conjunto de características técnicas del sistema diseñado para redistribuir la presión en pacientes con movilidad reducida en posición sedente. Su análisis permite evaluar el comportamiento del dispositivo ante diferentes condiciones simuladas.
+
+
+%Tabla
+\begin{table}[H]
+\centering
+\caption{Variables independientes. Definición de términos}
+\begin{tabular}{|p{4cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Propiedad} & \textbf{Indicador} & \textbf{Descripción del análisis o medición} \\ \hline
+Presencia del dispositivo & Activación del sistema de redistribución (activo/inactivo) & Determina si el sistema está operativo durante la simulación. \\ \hline
+Tipo de sensores integrados & Registro de datos de presión y temperatura & Evalúa la capacidad del sistema para captar información relevante. \\ \hline
+Tipo de actuadores & Respuesta mecánica simulada & Analiza el comportamiento de los actuadores neumáticos ante señales de control. \\ \hline
+Algoritmo de control & Número de ciclos de redistribución por sesión & Mide la frecuencia con la que el sistema ajusta la presión. \\ \hline
+Tiempo de respuesta del sistema & Tiempo de respuesta ante cambios posturales (segundos) & Calcula el intervalo entre la detección de un cambio y la activación del sistema. \\ \hline
+Estabilidad del sistema & Variación de presión tras activación & Evalúa si el sistema mantiene una redistribución estable sin fluctuaciones excesivas. \\ \hline
+\end{tabular}
+\\[1ex]
+\textit{Fuente: Elaboración propia}
+\end{table}
+
+\item \textbf{Variable dependiente: Distribución de presión en la región glútea}
+\\
+Estas variables reflejan el efecto del dispositivo sobre la presión ejercida en zonas anatómicas críticas. Su medición permite determinar la eficacia del sistema en la prevención de úlceras por presión.
+
+%TABLA VARIABLES DEPENDIENTES
+\begin{table}[H]
+\centering
+\caption{Variables dependientes. Definición de términos}
+\begin{tabular}{|p{4cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Propiedad} & \textbf{Indicador} & \textbf{Descripción del análisis o medición} \\ \hline
+Presión máxima en zonas críticas & Valor máximo de presión (mmHg o Pa) & Identifica el punto de mayor presión en la región glútea. \\ \hline
+Uniformidad de la presión & Desviación estándar de la presión & Evalúa la homogeneidad de la distribución de presión en la superficie de contacto. \\ \hline
+Área de contacto efectiva & Área de contacto medida en cm\textsuperscript{2} & Calcula la superficie total sobre la cual se distribuye el peso corporal. \\ \hline
+Reducción de presión & Porcentaje de reducción de presión & Compara la presión en zonas críticas antes y después de la intervención. \\ \hline
+\end{tabular}
+\\[1ex]
+\textit{Fuente: Elaboración propia}
+\end{table}
+
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Bases legales de la Investigación}
+
+El dise\~no de un dispositivo adaptativo para la prevenci\'on de \'ulceras por presi\'on en pacientes con movilidad reducida en Colombia debe cumplir con normativas tanto nacionales como internacionales, regulando la fabricaci\'on y uso de dispositivos m\'edicos, as\'i como las pol\'iticas relacionadas con la atenci\'on en salud y los derechos de los pacientes.\\
+
+La base fundamental de este marco legal se encuentra en la Constituci\'on Pol\'itica de Colombia, espec\'ificamente en los art\'iculos 11 y 49. Estos establecen el derecho a la vida y a la salud como derechos fundamentales, y asignan al Estado la responsabilidad de garantizar estos derechos, lo que incluye la prevenci\'on de condiciones como las \'ulceras por presi\'on.\\
+
+Complementariamente, en Colombia, la regulaci\'on de dispositivos m\'edicos es responsabilidad del Instituto Nacional de Vigilancia de Medicamentos y Alimentos (INVIMA). El Decreto 4725 de 2005 regula la fabricaci\'on, comercializaci\'on y distribuci\'on de dispositivos m\'edicos, estableciendo los requisitos para la obtenci\'on de registros sanitarios y clasificando los dispositivos seg\'un su nivel de riesgo. El dispositivo adaptativo para la prevenci\'on de \'ulceras por presi\'on probablemente se clasificar\'ia como de riesgo moderado debido a su uso en pacientes con movilidad reducida y el contacto constante con la piel.\\
+
+El Decreto 2078 de 2012 actualiza aspectos sobre el registro sanitario, los ensayos cl\'inicos y las buenas pr\'acticas de fabricaci\'on. Adem\'as, la norma ISO 10993 establece los requisitos para evaluar la biocompatibilidad de dispositivos m\'edicos, garantizando que no causen reacciones adversas al estar en contacto prolongado con el cuerpo humano.\\
+
+La Ley 1090 de 2006 regula el Sistema General de Seguridad Social en Salud (SGSSS) y establece los derechos y deberes de los usuarios, las instituciones prestadoras de servicios de salud y el Estado. Esta ley complementa la Ley 100 de 1993, que crea el SGSSS y establece el marco general para la prestaci\'on de servicios, garantizando una atenci\'on integral que incluye la prevenci\'on de complicaciones como las \'ulceras por presi\'on.\\
+
+El Sistema Obligatorio de Garant\'ia de Calidad en Salud (SOGCS), mediante la Resoluci\'on 2003 de 2014, exige que los prestadores cumplan con est\'andares de calidad. La Resoluci\'on 1995 de 2012 define los criterios de acreditaci\'on para las instituciones prestadoras de servicios, mientras que la Resoluci\'on 3280 de 2018 regula los derechos de los pacientes, garantizando atenci\'on oportuna y adecuada.\\
+
+La Ley Estatutaria 1751 de 2015 reglamenta el derecho fundamental a la salud, e incluye la provisi\'on de tecnolog\'ias y dispositivos para prevenir complicaciones. \\
+
+Colombia, como miembro de la Organizaci\'on Mundial de la Salud (OMS), tambi\'en debe seguir lineamientos internacionales como los establecidos por la ISO 13485, que regula sistemas de gesti\'on de calidad para dispositivos m\'edicos. Asimismo, se consideran las directrices de la FDA y la CE (Conformidad Europea), que establecen est\'andares internacionales de seguridad y eficacia.\\
+
+Finalmente, la Gu\'ia de Pr\'actica Cl\'inica para el Cuidado de Personas con UPP o con Riesgo de Padecerlas, emitida por el Ministerio de Salud y Protecci\'on Social, proporciona recomendaciones clave para la prevenci\'on y tratamiento de las \'ulceras por presi\'on, siendo fundamental para el desarrollo de dispositivos relacionados.

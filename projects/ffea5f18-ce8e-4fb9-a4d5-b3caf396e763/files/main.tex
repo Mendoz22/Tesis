@@ -1,0 +1,168 @@
+% ============================================================
+%     PLANTILLA APA7 OPTIMIZADA PARA OVERLEAF (UM B)
+%     Correcciones: paquetes duplicados, biblatex, hyperref,
+%     nomencl, captions, compilación rápida.
+% ============================================================
+
+\documentclass[stu,12pt,letterpaper,donotrepeattitle,
+    floatsintext,colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{apa7}
+
+% ------------------------------------------------------------
+% Idioma
+% ------------------------------------------------------------
+\usepackage[spanish]{babel}
+
+% ------------------------------------------------------------
+% Bibliografía APA optimizada
+% ------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[
+    backend=biber,
+    style=apa,
+    sorting=nyt
+]{biblatex}
+
+\addbibresource{mibibliografia.bib}
+% ------------------------------------------------------------
+% Paquetes generales
+% ------------------------------------------------------------
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ulem}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{tocloft}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{nomencl}
+
+% ------------------------------------------------------------
+% Hiperlinks (solo una vez)
+% ------------------------------------------------------------
+\usepackage{hyperref}
+
+% ------------------------------------------------------------
+% Nomenclatura – tabla de símbolos limpia
+% ------------------------------------------------------------
+\makenomenclature
+\renewcommand{\nomname}{Lista de símbolos}
+\renewcommand{\nompreamble}{
+    \vspace{0.5cm}
+    \noindent \textbf{Término} \hspace{2.5cm} \textbf{Descripción}
+    \vspace{0.3cm}
+}
+\setlength{\nomitemsep}{8pt}
+
+% ------------------------------------------------------------
+% Formato de captions (solo una vez)
+% ------------------------------------------------------------
+\usepackage{caption}
+\captionsetup[figure]{font=small,labelfont=bf,position=above}
+\captionsetup[table]{font=small,position=above}
+
+\addto\captionsspanish{\def\tablename{Tabla}}
+
+% ------------------------------------------------------------
+% Configuración del índice y numeración
+% ------------------------------------------------------------
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setcounter{secnumdepth}{3} % Numeración hasta subsecciones
+\renewcommand{\thesection}{} % Secciones sin número
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\setlength{\parskip}{0.5cm} % Espacio entre párrafos
+\setlength{\parindent}{1.27cm} % Sangría estándar APA
+
+% ------------------------------------------------------------
+% Encabezados APA
+% ------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% ------------------------------------------------------------
+% DOCUMENTO
+% ------------------------------------------------------------
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ------------------------------------------------------------
+% Portada y preámbulo
+% ------------------------------------------------------------
+\include{Preambulo/Portada}
+\newpage
+\setcounter{page}{4}
+\include{Preambulo/Dedicatoria}
+\newpage
+\include{Preambulo/Agradecimientos}
+\newpage
+\include{Preambulo/Resumen}
+\newpage
+
+% ------------------------------------------------------------
+% Índices
+% ------------------------------------------------------------
+
+\pagestyle{plain}
+
+\section*{\large Tabla de Contenido}
+\renewcommand\contentsname{}
+\vspace{-0.5cm}
+\tableofcontents
+\setcounter{tocdepth}{2}
+\newpage
+
+\section*{\large Lista de Tablas}
+\renewcommand{\listtablename}{}
+\vspace{-0.5cm}
+\listoftables
+\newpage
+
+\section*{\large Lista de Figuras}
+\renewcommand{\listfigurename}{}
+\vspace{-0.5cm}
+\listoffigures
+\newpage
+
+\include{Preambulo/TabSimbolos}
+\newpage
+\include{Preambulo/ListaAbreviaturas}
+\newpage
+
+% ------------------------------------------------------------
+% Capítulos
+% ------------------------------------------------------------
+\include{Capitulos/Introduccion/Introduccion}
+\include{Capitulos/Capitulo1/Capitulo1}
+\include{Capitulos/Capitulo2/Capitulo2}
+\include{Capitulos/Capitulo3/Capitulo3}
+\include{Capitulos/Capitulo4/Capitulo4}
+% \include{Capitulos/Capitulo5/Capitulo5}
+% \include{Capitulos/Anexo/anexo}
+
+% ------------------------------------------------------------
+% Referencias APA
+% ------------------------------------------------------------
+\addcontentsline{toc}{section}{Referencias}
+\begin{spacing}{2}
+\printbibliography
+
+\end{spacing}
+
+\end{document}
